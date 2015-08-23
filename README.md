@@ -54,4 +54,3 @@ When the form is submitted:
 2. The value that has been entered by the user should be deleted from the array
 3. Without prior knowledge of what number was submitted by the user, a function should be written to return the missing number from the array
 4. Display the missing number to the screen
-
