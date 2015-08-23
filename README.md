@@ -10,7 +10,7 @@ Evaluation test in Zend Framework 2
 All is done! :)
 
 
--- Details of the applications:
+-- Details of the application:
 
 We would like you to develop an application which accomplishes the following:
 1.	Login 
