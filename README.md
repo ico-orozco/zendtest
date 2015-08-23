@@ -1,13 +1,14 @@
 # zendtest
 Evaluation test in Zend Framework 2 (By Ildefonso Orozco)
 
--- Install instruction:
+Install instruction:
+--------------
 
-1. Clone this code to your server with PHP >= 5.3 & MySQL
+**1. Clone this code to your server with PHP >= 5.3 & MySQL**
 
     $ git clone https://github.com/ico1983/zendtest.git
 
-2. Create table in your Database:
+**2. Create table in your Database:**
 
     CREATE TABLE user (
       id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -18,9 +19,9 @@ Evaluation test in Zend Framework 2 (By Ildefonso Orozco)
       UNIQUE INDEX idx_email(email)
     );
 
-3. Configure database conection: /config/autoload/global.php  ( Ip, database name, username and pasword )
+**3. Configure database conection:** /config/autoload/global.php  ( Ip, database name, username and pasword )
 
-4. Configure your virtualhost for load correctly ZF2 and point directly to zendtest/public/ folder. Example:
+**4. Configure your virtualhost for load correctly ZF2 and point directly to zendtest/public/ folder.** Example:
 
     <VirtualHost *:80>
         ServerName _YOUR_IP_OR_NAMESERVER_
@@ -34,11 +35,12 @@ Evaluation test in Zend Framework 2 (By Ildefonso Orozco)
         </Directory>
     </VirtualHost>
     
-5. The first time running the application you need to register a new user before login
+**5. The first time running the application you need to register a new user before login**
 
 All is done! :)
 
--- Details of the application:
+Details of the application:
+--------------
 
 We would like you to develop an application which accomplishes the following:
 1.	Login 
