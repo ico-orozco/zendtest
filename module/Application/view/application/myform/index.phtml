@@ -1,0 +1,36 @@
+<section class="register">
+
+<h2>My test form in ZF2</h2>
+
+<?php if ($this->error): ?>
+	<p class="error">There were one or more issues with your submission. Please correct them as indicated below.</p>
+<?php endif ?>
+
+<?php
+	$form = $this->form;
+	$form->prepare();
+	$form->setAttribute('action', $this->url(NULL, array('controller'=>'Myform', 'action' => 'process')));
+	$form->setAttribute('method', 'post');
+	echo $this->form()->openTag($form);
+?>
+
+<div class="form-group">
+	<?php echo $this->formLabel($form->get('mynumber')); ?>
+	<?php
+		echo $this->formElement($form->get('mynumber'));
+		echo $this->formElementErrors($form->get('mynumber'));
+	?>
+</div>
+
+<?php
+	echo $this->formElement($form->get('submit'));
+	echo $this->formElementErrors($form->get('submit'));
+?>
+
+
+<?php echo $this->form()->closeTag() ?>
+
+
+<hr><a href="/"><< Back</a>
+
+</section>

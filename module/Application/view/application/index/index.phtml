@@ -1,0 +1,42 @@
+<div class="jumbotron">
+    <h1>Welcome to my ZF2 test :)</h1>
+
+    <?php if($this->identity()) { ?>
+        <p>Yow are logged in as: <?php echo $this->identity(); ?></p>
+        <p><a href="/users/login/logout">Logout</a></p>
+    <?php } else { ?>
+        <p>Yoy are not logged in</p>
+        <p><a href="/users/login">Login</a> | <a href="/users/register">New User Registration</a></p>
+    <?php } ?>
+
+</div>
+
+
+<?php if($this->identity()) { ?>
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">ZF2 Form Test</h3>
+                </div>
+                <div class="panel-body">
+                    <p>Here is the form of the test. Please, hit the next button to open the screen with the form</p>
+                    <p><a class="btn btn-success pull-right" href="/application/myform">Go to the form</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+
+    </div>
+
+<?php } ?>
+
+
+
+
+
+
+

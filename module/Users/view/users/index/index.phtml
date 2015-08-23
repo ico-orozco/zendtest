@@ -1,0 +1,9 @@
+<h1>Welcome to Users Module</h1>
+
+
+<?php if($this->user_email) { ?>
+	<p>Yoy are logged in as: <?php echo $this->user_email; ?></p>
+<?php } else { ?>
+	<p>Yoy are not logged in</p>
+	<p><a href="/users/login">Login</a> | <a href="/users/register">New User Registration</a></p>
+<?php } ?>

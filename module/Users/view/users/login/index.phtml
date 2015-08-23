@@ -1,0 +1,42 @@
+<section class="register">
+
+<h2>Login</h2>
+
+<?php if ($this->error): ?>
+	<p class="error">Access not allowed.</p>
+<?php endif ?>
+
+<?php
+	$form = $this->form;
+	$form->prepare();
+	$form->setAttribute('action', $this->url(NULL, array('controller'=>'Login', 'action' => 'process')));
+	$form->setAttribute('method', 'post');
+	echo $this->form()->openTag($form);
+?>
+
+<div class="form-group">
+	<?php echo $this->formLabel($form->get('email')); ?>
+	<?php
+		echo $this->formElement($form->get('email'));
+		echo $this->formElementErrors($form->get('email'));
+	?>
+</div>
+
+<div class="form-group">
+	<?php echo $this->formLabel($form->get('password'));?>
+	<?php
+		echo $this->formElement($form->get('password'));
+		echo $this->formElementErrors($form->get('password'));
+	?>
+</div>
+
+<?php
+	echo $this->formElement($form->get('submit'));
+	echo $this->formElementErrors($form->get('submit'));
+?>
+
+<?php echo $this->form()->closeTag() ?>
+
+<hr><a href="/"><< Back</a>
+
+</section>
