@@ -1,14 +1,42 @@
 # zendtest
-Evaluation test in Zend Framework 2
+Evaluation test in Zend Framework 2 (By Ildefonso Orozco)
 
 -- Install instruction:
 
-1. Clone this code to your server with PHP >= 5.3 & MySQL  ( $ git clone https://github.com/ico1983/zendtest.git )
-2. Configure database conection: /config/autoload/global.php
-3. Configure your virtualhost for load directly zendtest/public/ folder
+1. Clone this code to your server with PHP >= 5.3 & MySQL
+
+    $ git clone https://github.com/ico1983/zendtest.git
+
+2. Create table in your Database:
+
+    CREATE TABLE user (
+      id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+      NAME TEXT NOT NULL,
+      email VARCHAR(255) NOT NULL,
+      PASSWORD TEXT NOT NULL,
+      PRIMARY KEY (id),
+      UNIQUE INDEX idx_email(email)
+    );
+
+3. Configure database conection: /config/autoload/global.php  ( Ip, database name, username and pasword )
+
+4. Configure your virtualhost for load correctly ZF2 and point directly to zendtest/public/ folder. Example:
+
+    <VirtualHost *:80>
+        ServerName _YOUR_IP_OR_NAMESERVER_
+        DocumentRoot /var/www/zendtest/public
+        SetEnv APPLICATION_ENV "development"
+        <Directory /var/www/zendtest/public>
+            DirectoryIndex index.php
+            AllowOverride All
+            Order allow,deny
+            Allow from all
+        </Directory>
+    </VirtualHost>
+    
+5. The first time running the application you need to register a new user before login
 
 All is done! :)
-
 
 -- Details of the application:
 
