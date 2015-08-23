@@ -3,8 +3,7 @@ Evaluation test in Zend Framework 2
 
 -- Install instruction:
 
-1. Clone this code to your server with PHP >= 5.3 & MySQL
-    $ git clone https://github.com/ico1983/zendtest.git
+1. Clone this code to your server with PHP >= 5.3 & MySQL  ( $ git clone https://github.com/ico1983/zendtest.git )
 2. Configure database conection: /config/autoload/global.php
 3. Configure your virtualhost for load directly zendtest/public/ folder
 
